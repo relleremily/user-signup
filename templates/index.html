@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <style>
+            .error { color: red }
+        </style>
+
+        <h1>Signup</h1>
+
+        <form action="/validate-inputs" method="post">
+
+            <p><label for="username">Username:</label>
+            <input id ="username" type="text" name="username" value='{{username}}'>
+            <span class="error">{{username_error}}</span></p>
+
+            <p><label for"password">Password:</label>
+            <input id="password" type="password" name="password" />
+            <span class="error">{{password_error}}</span></p>
+
+            <p><label for"verify_password">Verify password:</label>
+            <input id="verify_password" type="password" name="verify_password">
+            <span class="error">{{verify_password_error}}</span></p>
+
+            <p><label for"email">Email (optional):</label>
+            <input id="email" type="text" name="email" value='{{email}}'>
+            <span class="error">{{email_error}}</span></p>
+
+        <input type="submit"/>
+
+        </form>
+    </body>
+</html>
